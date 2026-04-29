@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meu App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    HTML  CSS  JS  Result  
+
+ <div class="app">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand__icon">🏦</div>
+      <div class="brand__text">
+        <div class="brand__title">Bancos</div>
+        <div class="brand__subtitle">Gerenciador de Acessos e Senhas.</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel__title">CATEGORIAS</div>
+
+      <nav class="nav">
+        <button class="nav__item nav__item--active" type="button" data-cat="bancos">
+          <span class="nav__dot"></span>
+          Bancos
+          <span class="nav__count">8</span>
+        </button>
+
+        <button class="nav__item" type="button" data-cat="cartoes">
+          <span class="nav__dot nav__dot--yellow"></span>
+          Cartões
+          <span class="nav__count">3</span>
+        </button>
+
+        <button class="nav__item" type="button" data-cat="streaming">
+          <span class="nav__dot nav__dot--purple"></span>
+          Streaming
+          <span class="nav__count">6</span>
+        </button>
+
+        <button class="nav__item" type="button" data-cat="redes">
+          <span class="nav__dot nav__dot--blue"></span>
+          Redes Sociais
+          <span class="nav__count">7</span>
+        </button>
+
+        <button class="nav__item" type="button" data-cat="apps">
+          <span class="nav__dot nav__dot--cyan"></span>
+          Aplicativos
+          <span class="nav__count">5</span>
+        </button>
+
+        <button class="nav__item nav__item--muted" type="button" data-cat="outros">
+          <span class="nav__dot nav__dot--gray"></span>
+          Outros
+          <span class="nav__count">4</span>
+        </button>
+      </nav>
+    </div>
+
+    <div class="panel">
+      <div class="panel__title">AÇÕES RÁPIDAS</div>
+
+      <div class="quick">
+        <button class="btn btn--primary" type="button">+ Novo Acesso</button>
+        <button class="btn btn--ghost" type="button">Nova Categoria</button>
+        <button class="btn btn--ghost" type="button">Gerar Senha</button>
+      </div>
+
+      <div class="quote">
+        <div class="quote__mark">“</div>
+        <div class="quote__text">Organização é a chave que abre todas as portas.</div>
+        <div class="quote__author">— Desconhecido</div>
+      </div>
+    </div>
+
+    <div class="panel reminder">
+      <div class="reminder__title">LEMBRETES</div>
+      <div class="reminder__text">Mantenha suas senhas sempre seguras e atualizadas.</div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <header class="topbar">
+      <div class="search">
+        <span class="search__icon">⌕</span>
+        <input class="search__input" placeholder="Buscar acessos..." />
+      </div>
+
+      <div class="safe-badge">
+        <div class="safe-badge__icon">🛡️</div>
+        <div class="safe-badge__text">
+          <div class="safe-badge__title">Seus dados protegidos</div>
+          <div class="safe-badge__sub">Privado e seguro</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="stat">
+        <div class="stat__label">TOTAL DE ACESSOS</div>
+        <div class="stat__value">
+          <span class="stat__chip">🔒</span>
+          <span>33</span>
+        </div>
+        <div class="stat__hint">acessos cadastrados</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat__label">CATEGORIAS</div>
+        <div class="stat__value">
+          <span class="stat__chip stat__chip--gold">📁</span>
+          <span>6</span>
+        </div>
+        <div class="stat__hint">categorias</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat__label">ÚLTIMA ATUALIZAÇÃO</div>
+        <div class="stat__value">
+          <span class="stat__chip stat__chip--purple">📅</span>
+          <span>24/05/2025</span>
+        </div>
+        <div class="stat__hint">08:12</div>
+      </div>
+    </section>
+
+    <section class="list">
+      <!-- ======= BANCOS ======= -->
+      <div class="cat cat--active" data-cat="bancos">
+        <article class="item">
+          <div class="item__logo item__logo--orange">inter</div>
+          <div class="item__header">
+            <h3 class="item__title">BANCO INTER</h3>
+            <button class="fav" type="button" title="Favoritar">☆</button>
+            <div class="item__actions">
+              <button class="pill" type="button">Editar</button>
+              <button class="dots" type="button" title="Mais">⋯</button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <div class="field__label">Acesso</div>
+              <div class="field__value">
+                <span>074.399.051-05</span>
+                <button class="iconbtn" type="button" data-copy="074.399.051-05" title="Copiar">⧉</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Senha</div>
+              <div class="field__value">
+                <span class="masked" data-secret="SenhaExemplo@123" data-mask="••••••••••">••••••••••</span>
+                <button class="iconbtn js-toggle" type="button" title="Mostrar/ocultar">👁</button>
+                <button class="iconbtn" type="button" data-copy="SenhaExemplo@123" title="Copiar">⧉</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Agência</div>
+              <div class="field__value">
+                <span>30890616</span>
+                <button class="iconbtn" type="button" data-copy="30890616" title="Copiar">⧉</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Conta</div>
+              <div class="field__value">
+                <span>0001</span>
+                <button class="iconbtn" type="button" data-copy="0001" title="Copiar">⧉</button>
+              </div>
+            </div>
+
+            <div class="field field--wide">
+              <div class="field__label">Observações</div>
+              <div class="field__value"><span>—</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="item__logo item__logo--red">⟡</div>
+          <div class="item__header">
+            <h3 class="item__title item__title--red">BANCO BRADESCO</h3>
+            <button class="fav fav--red" type="button" title="Favoritar">☆</button>
+            <div class="item__actions">
+              <button class="pill" type="button">Editar</button>
+              <button class="dots" type="button" title="Mais">⋯</button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <div class="field__label">Acesso</div>
+              <div class="field__value">
+                <span>seu-email@exemplo.com</span>
+                <button class="iconbtn" type="button" data-copy="seu-email@exemplo.com" title="Copiar">⧉</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Senha</div>
+              <div class="field__value">
+                <span class="masked" data-secret="Bradesco@123" data-mask="••••••••••">••••••••••</span>
+                <button class="iconbtn js-toggle" type="button" title="Mostrar/ocultar">👁</button>
+                <button class="iconbtn" type="button" data-copy="Bradesco@123" title="Copiar">⧉</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Agência</div>
+              <div class="field__value"><span>—</span></div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Conta</div>
+              <div class="field__value"><span>—</span></div>
+            </div>
+
+            <div class="field field--wide">
+              <div class="field__label">Observações</div>
+              <div class="field__value"><span>—</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ======= CARTÕES ======= -->
+      <div class="cat" data-cat="cartoes">
+        <article class="item">
+          <div class="item__logo item__logo--amber">💳</div>
+          <div class="item__header">
+            <h3 class="item__title">CARTÃO PRINCIPAL</h3>
+            <button class="fav" type="button" title="Favoritar">☆</button>
+            <div class="item__actions">
+              <button class="pill" type="button">Editar</button>
+              <button class="dots" type="button" title="Mais">⋯</button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <div class="field__label">Titular</div>
+              <div class="field__value">
+                <span>SEU NOME</span>
+                <button class="iconbtn" type="button" data-copy="SEU NOME" title="Copiar">⧉</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Número</div>
+              <div class="field__value">
+                <span>0000 0000 0000 0000</span>
+                <button class="iconbtn" type="button" data-copy="0000 0000 0000 0000" title="Copiar">⧉</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Validade</div>
+              <div class="field__value"><span>12/30</span></div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">CVV</div>
+              <div class="field__value">
+                <span class="masked" data-secret="123" data-mask="•••">•••</span>
+                <button class="iconbtn js-toggle" type="button" title="Mostrar/ocultar">👁</button>
+                <button class="iconbtn" type="button" data-copy="123" title="Copiar">⧉</button>
+              </div>
+            </div>
+
+            <div class="field field--wide">
+              <div class="field__label">Observações</div>
+              <div class="field__value"><span>Cartão para compras online.</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ======= STREAMING ======= -->
+      <div class="cat" data-cat="streaming">
+        <article class="item">
+          <div class="item__logo item__logo--purple">▶</div>
+          <div class="item__header">
+            <h3 class="item__title">NETFLIX</h3>
+            <button class="fav" type="button">☆</button>
+            <div class="item__actions">
+              <button class="pill" type="button">Editar</button>
+              <button class="dots" type="button">⋯</button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <div class="field__label">E-mail</div>
+              <div class="field__value">
+                <span>email@exemplo.com</span>
+                <button class="iconbtn" type="button" data-copy="email@exemplo.com">⧉</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Senha</div>
+              <div class="field__value">
+                <span class="masked" data-secret="Netflix@123" data-mask="••••••••••">••••••••••</span>
+                <button class="iconbtn js-toggle" type="button">👁</button>
+                <button class="iconbtn" type="button" data-copy="Netflix@123">⧉</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Plano</div>
+              <div class="field__value"><span>Padrão</span></div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Vencimento</div>
+              <div class="field__value"><span>Todo dia 10</span></div>
+            </div>
+
+            <div class="field field--wide">
+              <div class="field__label">Observações</div>
+              <div class="field__value"><span>Perfis: Casa / Pessoal.</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ======= REDES SOCIAIS ======= -->
+      <div class="cat" data-cat="redes">
+        <article class="item">
+          <div class="item__logo item__logo--blue">👥</div>
+          <div class="item__header">
+            <h3 class="item__title">INSTAGRAM</h3>
+            <button class="fav" type="button">☆</button>
+            <div class="item__actions">
+              <button class="pill" type="button">Editar</button>
+              <button class="dots" type="button">⋯</button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <div class="field__label">Usuário</div>
+              <div class="field__value">
+                <span>@seuusuario</span>
+                <button class="iconbtn" type="button" data-copy="@seuusuario">⧉</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Senha</div>
+              <div class="field__value">
+                <span class="masked" data-secret="Insta@123" data-mask="••••••••••">••••••••••</span>
+                <button class="iconbtn js-toggle" type="button">👁</button>
+                <button class="iconbtn" type="button" data-copy="Insta@123">⧉</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">E-mail</div>
+              <div class="field__value"><span>email@exemplo.com</span></div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">2FA</div>
+              <div class="field__value"><span>Ativo</span></div>
+            </div>
+
+            <div class="field field--wide">
+              <div class="field__label">Observações</div>
+              <div class="field__value"><span>Conta principal.</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ======= APLICATIVOS ======= -->
+      <div class="cat" data-cat="apps">
+        <article class="item">
+          <div class="item__logo item__logo--cyan">📱</div>
+          <div class="item__header">
+            <h3 class="item__title">APP EXEMPLO</h3>
+            <button class="fav" type="button">☆</button>
+            <div class="item__actions">
+              <button class="pill" type="button">Editar</button>
+              <button class="dots" type="button">⋯</button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <div class="field__label">Login</div>
+              <div class="field__value">
+                <span>usuario@exemplo.com</span>
+                <button class="iconbtn" type="button" data-copy="usuario@exemplo.com">⧉</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Senha</div>
+              <div class="field__value">
+                <span class="masked" data-secret="App@123" data-mask="••••••••••">••••••••••</span>
+                <button class="iconbtn js-toggle" type="button">👁</button>
+                <button class="iconbtn" type="button" data-copy="App@123">⧉</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Site</div>
+              <div class="field__value">
+                <span>exemplo.com</span>
+                <button class="iconbtn" type="button" data-copy="exemplo.com">⧉</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Licença</div>
+              <div class="field__value"><span>Ativa</span></div>
+            </div>
+
+            <div class="field field--wide">
+              <div class="field__label">Observações</div>
+              <div class="field__value"><span>—</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ======= OUTROS ======= -->
+      <div class="cat" data-cat="outros">
+        <article class="item">
+          <div class="item__logo">🔑</div>
+          <div class="item__header">
+            <h3 class="item__title">WIFI / PORTA / GERAL</h3>
+            <button class="fav" type="button">☆</button>
+            <div class="item__actions">
+              <button class="pill" type="button">Editar</button>
+              <button class="dots" type="button">⋯</button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="field">
+              <div class="field__label">Nome</div>
+              <div class="field__value"><span>Minha Rede</span></div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Senha</div>
+              <div class="field__value">
+                <span class="masked" data-secret="SenhaWifi@123" data-mask="••••••••••">••••••••••</span>
+                <button class="iconbtn js-toggle" type="button">👁</button>
+                <button class="iconbtn" type="button" data-copy="SenhaWifi@123">⧉</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Local</div>
+              <div class="field__value"><span>Casa</span></div>
+            </div>
+
+            <div class="field">
+              <div class="field__label">Dica</div>
+              <div class="field__value"><span>—</span></div>
+            </div>
+
+            <div class="field field--wide">
+              <div class="field__label">Observações</div>
+              <div class="field__value"><span>—</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <footer class="footer-note">
+        <span class="lock">🔒</span>
+        Seus dados são privados e criptografados. Apenas você tem acesso.
+      </footer>
+    </section>
+  </main>
+</div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
